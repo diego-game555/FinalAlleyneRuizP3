@@ -789,12 +789,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064158815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12278779, y: 0.6963643, z: -0.12278779, w: 0.6963643}
-  m_LocalPosition: {x: 4.1, y: -0.24, z: 2.55}
+  m_LocalRotation: {x: 0.17357074, y: -0.029404461, z: 0.0051847994, w: 0.98436874}
+  m_LocalPosition: {x: -0.17051074, y: 2.21, z: -4.017341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2012550427}
   m_LocalEulerAnglesHint: {x: 20, y: 90, z: 0}
 --- !u!1001 &1136360608
 PrefabInstance:
@@ -1117,7 +1117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.13
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1125,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.72
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1162,7 +1162,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5082574569444486177, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1064158818}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5352958571798197664, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
       insertIndex: -1
@@ -1240,8 +1243,13 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!4 &2012550427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4684403152539725594, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+  m_PrefabInstance: {fileID: 1944596264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031793299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1451,6 @@ BoxCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1064158818}
   - {fileID: 1366742210}
   - {fileID: 2031793303}
   - {fileID: 1944596264}
