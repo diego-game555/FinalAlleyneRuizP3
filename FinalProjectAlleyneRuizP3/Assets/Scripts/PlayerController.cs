@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float speed = 10.0f;
     public float rotationSpeed;
+    public Attack attack;
+
+    private GameObject hitrange = default;
+    private bool attacking = false;
+    private float timeToAttack = 0.25f;
+    private float timer = 0f;
 
     private Rigidbody rb;
 
@@ -20,6 +26,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        hitrange = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -40,6 +47,24 @@ public class PlayerController : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
+
+        if (attacking)
+        {
+            timer += Time.deltaTime;
+
+            if(timer >- timeToAttack)
+            {
+                timer = 0;
+                attacking = false;
+                hitrange.SetActive(attacking);
+            }
+        }
+
     }
 
     private void OnApplicationFocus(bool focus)
@@ -53,6 +78,14 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+    private void Attack()
+    {
+        attacking = true;
+        hitrange.SetActive(attacking);
+    }
+
+    
 
     private void This()
     {
